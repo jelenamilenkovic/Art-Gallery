@@ -106,6 +106,7 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Exhibition.cs" />
     <Compile Include="Entities\Rent.cs" />
+    <Compile Include="Entities\RentID.cs" />
     <Compile Include="Entities\Shown.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

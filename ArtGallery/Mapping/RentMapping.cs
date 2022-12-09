@@ -15,11 +15,9 @@ namespace ArtGallery.Mapping
             Table("RENT");
 
             //mapiranje primarnog kljuca
-            Id(x => x.Id, "ID").GeneratedBy.SequenceIdentity("HR.RENT_ID_SEQ");
+            CompositeId(x => x.Id).KeyReference(x => x.Artwork, "ARTWORK_ID").KeyReference(x => x.Customer, "C_ID");
 
-            //mapiranje veza
-            References(x => x.Customer).Column("C_ID");
-            References(x => x.Artwork).Column("ARTWORK_ID");
+            //mapiranje entiteta
             Map(x => x.Rental_Price, "RENTAL_PRICE");
             Map(x => x.R_EndDate, "R_ENDDATE");
             Map(x => x.R_StartDate, "R_STARTDATE");
