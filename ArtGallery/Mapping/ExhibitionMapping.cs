@@ -11,11 +11,13 @@ namespace ArtGallery.Mapping
     { 
         public ExhibitionMapping() {
         Table("EXHIBITION");
-            Id(x => x.Exhibition_ID, "EXHIBITION_ID").GeneratedBy.Increment();
+        Id(x => x.Exhibition_ID, "EXHIBITION_ID").GeneratedBy.Increment();
         Map(x => x.Start_Date, "START_DATE");
         Map(x => x.End_Date, "END_DATE");
         Map(x => x.Hall, "HALL");
-       // HasMany(x => x.Shown).KeyColumn("EXHIBITION_ID").LazyLoad().Cascade.All().Inverse();
+            // HasMany(x => x.Shown).KeyColumn("EXHIBITION_ID").LazyLoad().Cascade.All().Inverse();
+
+            HasManyToMany(x => x.Artworks).Table("SHOWN").ParentKeyColumn("EXHIBITION_ID").ChildKeyColumn("ARTWORK_ID").Cascade.All(); 
         }
     }
 }

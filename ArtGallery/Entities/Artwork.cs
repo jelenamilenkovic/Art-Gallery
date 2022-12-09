@@ -18,9 +18,15 @@ namespace ArtGallery.Entities
         public virtual double Weight { get; set; }
         public virtual double Height { get; set; }
         public virtual int Price { get; set; }
-        public virtual IList<Shown> Shown { get; set; }
+        public virtual IList<Exhibition> Exhibitions { get; set; }
         public virtual Artist Artist { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual IList<Rent> Rent{ get; set; }
+
+        public Artwork()
+        {
+
+            Exhibitions = new List<Exhibition>();
+        }
     }
 }

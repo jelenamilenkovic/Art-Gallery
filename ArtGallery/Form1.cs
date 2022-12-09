@@ -25,10 +25,15 @@ namespace ArtGallery
             {
                 ISession s = DataLayer.GetSession();
 
-                //Ucitavaju se podaci o prodavnici za zadatim brojem
-                ArtGallery.Entities.Artist p = s.Load<ArtGallery.Entities.Artist>(3);
-                foreach(Artwork o in p.Artworks) { 
-                MessageBox.Show(o.Title);}
+                Artwork r1 = s.Load<Artwork>(1);
+
+                foreach (Entities.Exhibition p1 in r1.Exhibitions)
+                {
+                    MessageBox.Show(p1.Hall.ToString());
+                }
+
+
+               
 
                 s.Close();
             }

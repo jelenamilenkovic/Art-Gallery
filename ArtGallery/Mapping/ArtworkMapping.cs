@@ -25,6 +25,8 @@ namespace ArtGallery.Mapping
             Map(x => x.Weight, "WEIGHT");
             Map(x => x.Drawn_on, "DRAWN_ON");
             Map(x => x.Type, "TYPEA");
+
+            HasManyToMany(x => x.Exhibitions).Table("SHOWN").ParentKeyColumn("ARTWORK_ID").ChildKeyColumn("EXHIBITION_ID").Cascade.All().Inverse();
         }
     }
 }

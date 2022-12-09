@@ -16,6 +16,7 @@ namespace ArtGallery.Entities
         public virtual string Country { get; set; }
         public virtual string Phone_Number { get; set; }
         public virtual IList<Artwork> Artworks { get; set; }
+       
         public Artist()
         {
             Artworks = new List<Artwork>();

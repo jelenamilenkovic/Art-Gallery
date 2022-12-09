@@ -20,7 +20,7 @@ namespace ArtGallery.Mapping
         Map(x => x.Phone_Number, "PHONE_NUMBER");
         Map(x => x.BirthDate, "BIRTHDATE");
 
-            HasMany(x => x.Artworks).KeyColumn("ARTIST_ID").Cascade.All().Inverse();
+        HasMany(x => x.Artworks).KeyColumn("ARTIST_ID").Cascade.All().Inverse();
         }
     }
 }

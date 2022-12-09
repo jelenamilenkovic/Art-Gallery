@@ -12,11 +12,11 @@ namespace ArtGallery.Entities
         public virtual string Start_Date { get; set; }
         public virtual string End_Date { get; set; }
         public virtual int Hall { get; set; }
-        public virtual IList<Shown> Shown { get; set; }
+        public virtual IList<Artwork> Artworks { get; set; }
 
         public Exhibition()
         {
-            Shown = new List<Shown>();
+            Artworks = new List<Artwork>();
         }
     }
 }
