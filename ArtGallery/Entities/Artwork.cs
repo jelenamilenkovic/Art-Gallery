@@ -27,6 +27,8 @@ namespace ArtGallery.Entities
         {
 
             Exhibitions = new List<Exhibition>();
+
+             Rent = new List<Rent>();
         }
     }
 }

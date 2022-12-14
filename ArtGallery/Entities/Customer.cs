@@ -19,7 +19,7 @@ namespace ArtGallery.Entities
         public Customer()
         {
             Artworks = new List<Artwork>();
-            Artworks = new List<Artwork>();
+            Rent = new List<Rent>();
         }
     }
 }

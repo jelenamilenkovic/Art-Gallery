@@ -19,6 +19,7 @@ namespace ArtGallery.Mapping
             Map(x => x.CustomerAddress, "C_ADDRESS");
 
             HasMany(x => x.Artworks).KeyColumn("C_ID").Cascade.All().Inverse();
+            HasMany(x => x.Rent).KeyColumn("C_ID").LazyLoad().Cascade.All();
             // HasMany(x => x.Shown).KeyColumn("EXHIBITION_ID").LazyLoad().Cascade.All().Inverse();
         }
     }

@@ -27,11 +27,10 @@ namespace ArtGallery
 
                 Artwork r1 = s.Load<Artwork>(1);
 
-                foreach (Entities.Exhibition p1 in r1.Exhibitions)
+                foreach (Entities.Rent p1 in r1.Rent)
                 {
-                    MessageBox.Show(p1.Hall.ToString());
+                    MessageBox.Show(p1.Rental_Price.ToString());
                 }
-
 
                
 
@@ -66,6 +65,16 @@ namespace ArtGallery
             {
                 MessageBox.Show(ec.Message);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

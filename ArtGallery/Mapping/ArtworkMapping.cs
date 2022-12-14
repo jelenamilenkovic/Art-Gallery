@@ -27,6 +27,7 @@ namespace ArtGallery.Mapping
             Map(x => x.Type, "TYPEA");
 
             HasManyToMany(x => x.Exhibitions).Table("SHOWN").ParentKeyColumn("ARTWORK_ID").ChildKeyColumn("EXHIBITION_ID").Cascade.All().Inverse();
+            HasMany(x => x.Rent).KeyColumn("ARTWORK_ID").LazyLoad().Cascade.All().Inverse();
         }
     }
 }

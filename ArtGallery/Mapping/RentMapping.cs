@@ -8,7 +8,7 @@ using FluentNHibernate.Mapping;
 
 namespace ArtGallery.Mapping
 {
-    public class RentMapping: ClassMap<ArtGallery.Entities.Rent>
+    public class RentMapping: ClassMap<Rent>
     {
         public RentMapping()
         {
