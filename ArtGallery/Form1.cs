@@ -14,6 +14,7 @@ namespace ArtGallery
 {
     public partial class Form1 : Form
     {
+        List<Panel> listPanel = new List<Panel>();
         public Form1()
         {
             InitializeComponent();
@@ -69,12 +70,33 @@ namespace ArtGallery
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            listPanel.Add(panel1);
+            listPanel.Add(panel3);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           listPanel[0].BringToFront();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listPanel[1].BringToFront();
         }
     }
 }
