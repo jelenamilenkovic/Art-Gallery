@@ -101,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataLayer.cs" />
+    <Compile Include="DTO.cs" />
+    <Compile Include="DTOManager.cs" />
+    <Compile Include="DTOs.cs" />
     <Compile Include="Entities\Artist.cs" />
     <Compile Include="Entities\Artwork.cs" />
     <Compile Include="Entities\Customer.cs" />
@@ -114,6 +117,78 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddArtist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddArtist.Designer.cs">
+      <DependentUpon>AddArtist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddArtwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddArtwork.Designer.cs">
+      <DependentUpon>AddArtwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddExhibition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddExhibition.Designer.cs">
+      <DependentUpon>AddExhibition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditArtist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditArtist.Designer.cs">
+      <DependentUpon>EditArtist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditArtwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditArtwork.Designer.cs">
+      <DependentUpon>EditArtwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewArtists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewArtists.Designer.cs">
+      <DependentUpon>ViewArtists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewArtworks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewArtworks.Designer.cs">
+      <DependentUpon>ViewArtworks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewCustomers.Designer.cs">
+      <DependentUpon>ViewCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewExhibition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewExhibition.Designer.cs">
+      <DependentUpon>ViewExhibition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mapping\ArtistMapping.cs" />
     <Compile Include="Mapping\ArtworkMapping.cs" />
     <Compile Include="Mapping\CustomerMapping.cs" />
@@ -124,6 +199,42 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddArtist.resx">
+      <DependentUpon>AddArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddArtwork.resx">
+      <DependentUpon>AddArtwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddExhibition.resx">
+      <DependentUpon>AddExhibition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditArtist.resx">
+      <DependentUpon>EditArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditArtwork.resx">
+      <DependentUpon>EditArtwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewArtists.resx">
+      <DependentUpon>ViewArtists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewArtworks.resx">
+      <DependentUpon>ViewArtworks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewCustomers.resx">
+      <DependentUpon>ViewCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewExhibition.resx">
+      <DependentUpon>ViewExhibition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

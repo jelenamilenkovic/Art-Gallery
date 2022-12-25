@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ArtGallery.Entities
 {
-    class PhoneNumber
+    public class PhoneNumber
     {
+
+        public virtual int Id { get; set; }
+        public virtual string Phone { get; set; }
+        public virtual Customer Customer_ID { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using ArtGallery.Entities;
 
 namespace ArtGallery
 {
-    #region Radnik
+    #region Artist
 
     public class ArtistBasic
 
@@ -18,6 +18,7 @@ namespace ArtGallery
         public string City;
         public string BirthDate;
         public string Country;
+        public virtual IList<ArtworkBasic> Artworks { get; set; }
         public ArtistBasic(int artistId, string name, string lname,string c,string b,string con)
         {
             this.Artist_ID = artistId;
@@ -30,6 +31,7 @@ namespace ArtGallery
         public ArtistBasic()
         {
 
+            Artworks = new List<ArtworkBasic>();
         }
     }
 
@@ -67,8 +69,16 @@ namespace ArtGallery
         public string CustomerLastName;
         public string CustomerEmail;
         public string CustomerAddress;
+        public virtual IList<PhoneNumberBasic> C_PhoneNumbers { get; set; }
 
-        public CustomerBasic() { }
+        public virtual IList<ArtworkBasic> Artworks { get; set; }
+        public virtual IList<RentBasic> Rent { get; set; }
+
+        public CustomerBasic() { 
+            Rent=new List<RentBasic>();
+            C_PhoneNumbers = new List<PhoneNumberBasic>();
+            Artworks = new List<ArtworkBasic>();
+        }
         public CustomerBasic(int cId,string cName,string cLName,string cEmail, string cAddress)
         {
             this.Customer_ID = cId;
@@ -100,15 +110,50 @@ namespace ArtGallery
 
     #endregion
 
+    #region PhoneNumber
+
+    public class PhoneNumberBasic
+    {
+
+        public int Id;
+        public string Phone;
+        public CustomerBasic Customer_ID;
+        public PhoneNumberBasic() { }
+        public PhoneNumberBasic(int i,string p,CustomerBasic cid) {
+            this.Id = i;
+            this.Phone = p;
+            this.Customer_ID = cid;
+        }
+    }
+    public class PhoneNumberPregled
+    {
+
+        public int Id;
+        public string Phone;
+        public CustomerBasic Customer_ID;
+        public PhoneNumberPregled() { }
+        public PhoneNumberPregled(int i, string p, CustomerBasic cid)
+        {
+            this.Id = i;
+            this.Phone = p;
+            this.Customer_ID = cid;
+        }
+    }
+
+    #endregion
+
     #region Exhibition
 
     public class ExhibitionBasic {
         public int Exhibition_ID;
         public string Start_Date;
         public string End_Date;
-        public int Hall;
+        public int Hall; 
 
-        public ExhibitionBasic() { }
+        public virtual IList<ArtworkBasic> Artworks { get; set; }
+        public ExhibitionBasic() {
+            Artworks = new List<ArtworkBasic>();
+        }
         public ExhibitionBasic(int eId,string sDate,string eDate,int h)
         {
             this.Exhibition_ID = eId;
@@ -142,12 +187,13 @@ namespace ArtGallery
     {
         public int Id;
         public ExhibitionBasic Exhibition;
-      //  public ArtworkBasic Artwork;
-      public ShownPregled() { }
-      public ShownPregled(int i, ExhibitionBasic eb)
+        public ArtworkBasic Artwork;
+        public ShownPregled() { }
+        public ShownPregled(int i, ExhibitionBasic eb, ArtworkBasic art)
         {
             this.Id = i;
             this.Exhibition = eb;
+            this.Artwork = art;
         }
 
 
@@ -155,12 +201,13 @@ namespace ArtGallery
     public class ShownBasic { 
         public int Id;
         public ExhibitionBasic Exhibition;
-        //  public ArtworkBasic Artwork;
+        public ArtworkBasic Artwork;
         public ShownBasic() { }
-        public ShownBasic(int i, ExhibitionBasic eb)
+        public ShownBasic(int i, ExhibitionBasic eb, ArtworkBasic art)
         {
             this.Id = i;
             this.Exhibition = eb;
+            this.Artwork = art;
         }
 
 
@@ -246,8 +293,10 @@ namespace ArtGallery
             Rent = new List<RentBasic>();
         }
 
-        public ArtworkBasic(int id,string title,string style,int year, string type, string drawn,string m,double w,double h)
+        public ArtworkBasic(int id,string title,string style,int year, string type, string drawn,string m,double w,double h,ArtistBasic art,CustomerBasic cu)
         {
+            this.Customer=cu;
+            this.Artist =art;
             this.Artwork_ID = id;
             this.Title = title;
             this.Style = style;
@@ -289,7 +338,6 @@ namespace ArtGallery
             this.Material = m;
             this.Weight = w;
             this.Height = h;
-
         }
     }
     #endregion

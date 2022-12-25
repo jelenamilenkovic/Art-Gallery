@@ -16,8 +16,11 @@ namespace ArtGallery.Entities
         public virtual IList<Artwork> Artworks { get; set; }
         public virtual IList<Rent> Rent { get; set; }
 
+      //  public virtual IList<PhoneNumber> Phone_Numbers { get; set; }
+
         public Customer()
         {
+      //      Phone_Numbers = new List<PhoneNumber>();
             Artworks = new List<Artwork>();
             Rent = new List<Rent>();
         }
