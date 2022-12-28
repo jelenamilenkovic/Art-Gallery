@@ -20,25 +20,17 @@ namespace ArtGallery.Forms
         public void WriteData()
         {
             this.dataGridView1.Rows.Clear();
-            //dataGridView1
-            //listViewArtist.Items.Clear();
             List<ArtistPregled> podaci = DTOManager.getArtists();
 
 
 
             foreach (ArtistPregled p in podaci)
             {
-                // DataGridViewRow item = new DataGridViewRow(new string[] { p.Artist_ID.ToString(), p.Name, p.Last_Name, p.City, p.BirthDate, p.Country });
-                //  ListViewItem item = new ListViewItem(new string[] { p.Artist_ID.ToString(), p.Name, p.Last_Name, p.City, p.BirthDate, p.Country });
-
-                //  listViewArtist.Items.Add(item);
                 this.dataGridView1.Rows.Add(new string[] { p.Artist_ID.ToString(), p.Name, p.Last_Name, p.City, p.BirthDate, p.Country });
 
             }
 
             dataGridView1.Refresh();
-
-            //listViewArtist.Refresh();
         }
         private void listViewArtist_SelectedIndexChanged(object sender, EventArgs e)
         {

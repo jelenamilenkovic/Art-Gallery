@@ -308,6 +308,33 @@ namespace ArtGallery
             this.Height = h;
 
         }
+        public ArtworkBasic(int id, string title, string style, int year, string type, string drawn, string m, double w, double h, ArtistBasic art)
+        {
+            this.Artist = art;
+            this.Artwork_ID = id;
+            this.Title = title;
+            this.Style = style;
+            this.Year = year;
+            this.Type = type;
+            this.Drawn_on = drawn;
+            this.Material = m;
+            this.Weight = w;
+            this.Height = h;
+
+        }
+        public ArtworkBasic(int id, string title, string style, int year, string type, string drawn, string m, double w, double h)
+        {
+            this.Artwork_ID = id;
+            this.Title = title;
+            this.Style = style;
+            this.Year = year;
+            this.Type = type;
+            this.Drawn_on = drawn;
+            this.Material = m;
+            this.Weight = w;
+            this.Height = h;
+
+        }
     }
     public class ArtworkPregled
     {
@@ -329,6 +356,19 @@ namespace ArtGallery
 
         public ArtworkPregled(int id, string title, string style, int year, string type, string drawn, string m, double w, double h)
         {
+            this.Artwork_ID = id;
+            this.Title = title;
+            this.Style = style;
+            this.Year = year;
+            this.Type = type;
+            this.Drawn_on = drawn;
+            this.Material = m;
+            this.Weight = w;
+            this.Height = h;
+        }
+        public ArtworkPregled(int id, string title, string style, int year, string type, string drawn, string m, double w, double h,CustomerBasic cu)
+        {
+            this.Customer = cu;
             this.Artwork_ID = id;
             this.Title = title;
             this.Style = style;

@@ -41,7 +41,6 @@ C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Form
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.AddExhibition.resources
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.EditArtist.resources
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.EditArtwork.resources
-C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.EditCustomer.resources
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.Form2.resources
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.ViewArtists.resources
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.ViewArtworks.resources
@@ -53,3 +52,4 @@ C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.cspr
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.csproj.CopyComplete
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.exe
 C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.pdb
+C:\Users\Aleksandra\source\repos\ArtGallery\ArtGallery\obj\Debug\ArtGallery.Forms.RentArtwork.resources

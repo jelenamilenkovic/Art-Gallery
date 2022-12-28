@@ -150,7 +150,7 @@ namespace ArtGallery
 
         private void button9_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new EditCustomer());
+            openChildFormInPanel(new RentArtwork());
 
             hideSubMenu();
         }

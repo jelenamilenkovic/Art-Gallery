@@ -15,20 +15,14 @@ namespace ArtGallery.Forms
         public ViewArtworks()
         {
             InitializeComponent();
-            this.dataGridViewArtworks.Columns["MaterialArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["HeightArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["WeightArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["ArtworksType"].Visible = true;
-
-
-            this.dataGridViewArtworks.Columns["DrawnArtworks"].Visible = true;
-            WriteData();
+            Visibility(3);
+            WriteData(3);
         }
 
-        public void WriteData()
+        public void WriteData(int n)
         {
             this.dataGridViewArtworks.Rows.Clear();
-            List<ArtworkPregled> podaci = DTOManager.getArtworks();
+            List<ArtworkPregled> podaci = n==0 ? DTOManager.getPaintings():(n==1? DTOManager.getSculptures() : DTOManager.getArtworks());
 
 
 
@@ -43,63 +37,30 @@ namespace ArtGallery.Forms
 
         private void btnAllOfArtworks_Click(object sender, EventArgs e)
         {
-
-            this.dataGridViewArtworks.Columns["MaterialArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["HeightArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["WeightArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["ArtworksType"].Visible = true;
-
-
-            this.dataGridViewArtworks.Columns["DrawnArtworks"].Visible = true;
-
-            WriteData();
+            Visibility(3);
+            WriteData(3);
         }
 
-        private void btnPainting_Click(object sender, EventArgs e)
+        private void Visibility(int n)
+        {   
+            this.dataGridViewArtworks.Columns["ArtworksType"].Visible = n==3 ? true : false;
+
+            this.dataGridViewArtworks.Columns["MaterialArtworks"].Visible = n == 0 ? false : true;
+            this.dataGridViewArtworks.Columns["HeightArtworks"].Visible = n == 0 ? false : true;
+            this.dataGridViewArtworks.Columns["WeightArtworks"].Visible = n == 0 ? false : true;
+
+            this.dataGridViewArtworks.Columns["DrawnArtworks"].Visible =n==1?false:true;
+        }
+        private void btnPainting_Click(object sender, EventArgs e)    // 0
         {
-            this.dataGridViewArtworks.Columns["MaterialArtworks"].Visible = false;
-            this.dataGridViewArtworks.Columns["HeightArtworks"].Visible = false;
-            this.dataGridViewArtworks.Columns["WeightArtworks"].Visible = false;
-            this.dataGridViewArtworks.Columns["ArtworksType"].Visible = false;
-
-
-            this.dataGridViewArtworks.Columns["DrawnArtworks"].Visible = true;
-
-            this.dataGridViewArtworks.Rows.Clear();
-            List<ArtworkPregled> podaci = DTOManager.getPaintings();
-
-
-
-            foreach (ArtworkPregled p in podaci)
-            {
-                this.dataGridViewArtworks.Rows.Add(new string[] { p.Artwork_ID.ToString(), p.Title, p.Style, p.Year.ToString(), p.Type, p.Drawn_on, p.Material, p.Weight.ToString(), p.Height.ToString() });
-
-            }
-
-            dataGridViewArtworks.Refresh();
+            Visibility(0);
+            WriteData(0);
         }
 
-        private void btnSculpture_Click(object sender, EventArgs e)
+        private void btnSculpture_Click(object sender, EventArgs e)  // 1
         {
-            this.dataGridViewArtworks.Columns["ArtworksType"].Visible = false;
-            this.dataGridViewArtworks.Columns["DrawnArtworks"].Visible = false;
-
-            this.dataGridViewArtworks.Columns["MaterialArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["HeightArtworks"].Visible = true;
-            this.dataGridViewArtworks.Columns["WeightArtworks"].Visible = true;
-
-            this.dataGridViewArtworks.Rows.Clear();
-            List<ArtworkPregled> podaci = DTOManager.getSculptures();
-
-
-
-            foreach (ArtworkPregled p in podaci)
-            {
-                this.dataGridViewArtworks.Rows.Add(new string[] { p.Artwork_ID.ToString(), p.Title, p.Style, p.Year.ToString(), p.Type, p.Drawn_on, p.Material, p.Weight.ToString(), p.Height.ToString() });
-
-            }
-
-            dataGridViewArtworks.Refresh();
+            Visibility(1);
+            WriteData(1);
         }
     }
 }

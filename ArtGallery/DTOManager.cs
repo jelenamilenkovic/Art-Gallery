@@ -11,6 +11,7 @@ namespace ArtGallery
 {
     public class DTOManager
     {
+        public static int h;
         #region Artist
         public static List<ArtistPregled> getArtists()
         {
@@ -51,10 +52,10 @@ namespace ArtGallery
                 o.City = p.City;
                 o.Country = p.Country;
 
-                s.SaveOrUpdate(o);
+                h=(int)s.Save(o);
 
                 s.Flush();
-
+                
                 s.Close();
             }
             catch (Exception ec)
@@ -361,7 +362,80 @@ namespace ArtGallery
         #endregion
 
         #region Artworks
+        public static void SaveArtworkForArtist(ArtworkBasic p,bool x)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
 
+                ArtGallery.Entities.Artwork o = new ArtGallery.Entities.Artwork();
+
+                if (x)
+                {
+                    o.Drawn_on = p.Drawn_on;
+                }
+                else
+                {
+                    o.Height = p.Height;
+                    o.Material = p.Material;
+                    o.Weight = p.Weight;
+                }
+                o.Price = p.Price;
+                o.Style = p.Style;
+                o.Title = p.Title;
+                o.Type = p.Type;
+                o.Year = p.Year;
+
+                ArtGallery.Entities.Artist r = s.Load<ArtGallery.Entities.Artist>(p.Artist.Artist_ID);
+                o.Artist = r;
+
+
+                s.Save(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
+        public static void SaveArtworkandArtist(ArtworkBasic p,ArtistBasic k,bool x)
+        {
+            ISession s = DataLayer.GetSession();
+
+            ArtGallery.Entities.Artwork o = new ArtGallery.Entities.Artwork();
+
+            if (x)
+            {
+                o.Drawn_on = p.Drawn_on;
+            }
+            else
+            {
+                o.Height = p.Height;
+                o.Material = p.Material;
+                o.Weight = p.Weight;
+            }
+            o.Price = p.Price;
+            o.Style = p.Style;
+            o.Title = p.Title;
+            o.Type = p.Type;
+            o.Year = p.Year;
+
+
+            addArtist(k);
+            ArtGallery.Entities.Artist r = s.Load<ArtGallery.Entities.Artist>(h);
+            o.Artist = r;
+
+
+            s.Save(o);
+
+            s.Flush();
+
+            s.Close();
+        }
         public static List<ArtworkPregled> getArtworks()
         {
             List<ArtworkPregled> artworks = new List<ArtworkPregled>();
@@ -385,6 +459,25 @@ namespace ArtGallery
             }
 
             return artworks;
+        }
+        public static ArtworkBasic getArtwork(int id)
+        {
+            ArtworkBasic pb = new ArtworkBasic();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                ArtGallery.Entities.Artwork o = s.Load<ArtGallery.Entities.Artwork>(id);
+                pb = new ArtworkBasic(o.Artwork_ID, o.Title, o.Style, o.Year, o.Type, o.Drawn_on, o.Material, o.Weight, o.Height);
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return pb;
         }
 
         public static List<ArtworkPregled> getPaintings()
@@ -439,22 +532,27 @@ namespace ArtGallery
             return artworks;
         }
 
-        public static void addArtwork(ArtworkBasic p)
+        public static void addArtwork(ArtworkBasic p,bool x)
         {
             try
             {
                 ISession s = DataLayer.GetSession();
 
                 ArtGallery.Entities.Artwork o = new ArtGallery.Entities.Artwork();
-
-                o.Drawn_on = p.Drawn_on;
-                o.Height = p.Height;
-                o.Material = p.Material;
+                if (x)
+                {
+                    o.Drawn_on = p.Drawn_on;
+                }
+                else
+                {
+                    o.Height = p.Height;
+                    o.Material = p.Material;
+                    o.Weight = p.Weight;
+                }
                 o.Price = p.Price;
                 o.Style = p.Style;
                 o.Title = p.Title;
                 o.Type = p.Type;
-                o.Weight = p.Weight;
                 o.Year = p.Year;
 
                 s.SaveOrUpdate(o);
@@ -467,6 +565,53 @@ namespace ArtGallery
             {
                 //handle exceptions
             }
+        }
+
+        public static void deleteArtwork(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                ArtGallery.Entities.Artwork o = s.Load<ArtGallery.Entities.Artwork>(id);
+
+                s.Delete(o);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
+        #endregion
+
+        #region Rent
+
+        public static void addRent(RentBasic rent)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Rent r = new Rent();
+                r.Id = new RentID();
+                r.Id.Artwork = s.Load<ArtGallery.Entities.Artwork>(rent.Id.Artwork.Artwork_ID);
+                r.Id.Customer = s.Load<Customer>(rent.Id.Customer.Customer_ID);
+                r.R_StartDate = rent.R_StartDate;
+                r.R_EndDate = rent.R_EndDate;
+
+                s.SaveOrUpdate(r);
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
         }
         #endregion
     }

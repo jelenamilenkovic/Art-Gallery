@@ -44,7 +44,7 @@ namespace ArtGallery.Forms
             // 
             // btnAddCustomerDB
             // 
-            this.btnAddCustomerDB.Location = new System.Drawing.Point(506, 317);
+            this.btnAddCustomerDB.Location = new System.Drawing.Point(540, 322);
             this.btnAddCustomerDB.Name = "btnAddCustomerDB";
             this.btnAddCustomerDB.Size = new System.Drawing.Size(110, 27);
             this.btnAddCustomerDB.TabIndex = 4;
@@ -64,23 +64,23 @@ namespace ArtGallery.Forms
             this.groupBoxCustomer.Controls.Add(this.label2);
             this.groupBoxCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCustomer.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBoxCustomer.Location = new System.Drawing.Point(51, 31);
+            this.groupBoxCustomer.Location = new System.Drawing.Point(25, 12);
             this.groupBoxCustomer.Name = "groupBoxCustomer";
-            this.groupBoxCustomer.Size = new System.Drawing.Size(566, 267);
+            this.groupBoxCustomer.Size = new System.Drawing.Size(625, 299);
             this.groupBoxCustomer.TabIndex = 3;
             this.groupBoxCustomer.TabStop = false;
             this.groupBoxCustomer.Text = "Add customer";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(402, 90);
+            this.txtAddress.Location = new System.Drawing.Point(402, 75);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(114, 20);
             this.txtAddress.TabIndex = 14;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(402, 32);
+            this.txtEmail.Location = new System.Drawing.Point(402, 29);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(114, 20);
             this.txtEmail.TabIndex = 13;
@@ -88,7 +88,7 @@ namespace ArtGallery.Forms
             // Country
             // 
             this.Country.AutoSize = true;
-            this.Country.Location = new System.Drawing.Point(318, 93);
+            this.Country.Location = new System.Drawing.Point(318, 78);
             this.Country.Name = "Country";
             this.Country.Size = new System.Drawing.Size(52, 13);
             this.Country.TabIndex = 12;
@@ -97,7 +97,7 @@ namespace ArtGallery.Forms
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.Location = new System.Drawing.Point(318, 35);
+            this.Email.Location = new System.Drawing.Point(318, 32);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(37, 13);
             this.Email.TabIndex = 11;
@@ -105,14 +105,14 @@ namespace ArtGallery.Forms
             // 
             // txtCustomerLName
             // 
-            this.txtCustomerLName.Location = new System.Drawing.Point(131, 90);
+            this.txtCustomerLName.Location = new System.Drawing.Point(131, 75);
             this.txtCustomerLName.Name = "txtCustomerLName";
             this.txtCustomerLName.Size = new System.Drawing.Size(114, 20);
             this.txtCustomerLName.TabIndex = 9;
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(131, 33);
+            this.txtCustomerName.Location = new System.Drawing.Point(131, 30);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(114, 20);
             this.txtCustomerName.TabIndex = 8;
@@ -120,7 +120,7 @@ namespace ArtGallery.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 93);
+            this.label3.Location = new System.Drawing.Point(47, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 4;
@@ -129,7 +129,7 @@ namespace ArtGallery.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 36);
+            this.label2.Location = new System.Drawing.Point(47, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 1;

@@ -153,11 +153,11 @@
     <Compile Include="Forms\EditArtwork.Designer.cs">
       <DependentUpon>EditArtwork.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditCustomer.cs">
+    <Compile Include="Forms\RentArtwork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditCustomer.Designer.cs">
-      <DependentUpon>EditCustomer.cs</DependentUpon>
+    <Compile Include="Forms\RentArtwork.Designer.cs">
+      <DependentUpon>RentArtwork.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form2.cs">
       <SubType>Form</SubType>
@@ -218,8 +218,8 @@
     <EmbeddedResource Include="Forms\EditArtwork.resx">
       <DependentUpon>EditArtwork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditCustomer.resx">
-      <DependentUpon>EditCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RentArtwork.resx">
+      <DependentUpon>RentArtwork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
