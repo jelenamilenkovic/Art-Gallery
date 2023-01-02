@@ -220,15 +220,15 @@ namespace ArtGallery
         public RentID Id;
 
         public int Rental_Price;
-        public string R_StartDate;
-        public string R_EndDate;
+        public DateTime R_StartDate;
+        public DateTime R_EndDate;
 
         public RentPregled()
         {
 
         }
 
-        public RentPregled(RentID id,int price,string sdate,string edate)
+        public RentPregled(RentID id,int price,DateTime sdate,DateTime edate)
         {
             this.Rental_Price = price;
             this.Id = id;
@@ -241,15 +241,15 @@ namespace ArtGallery
         public RentIDBasic Id;
 
         public int Rental_Price;
-        public string R_StartDate;
-        public string R_EndDate;
+        public DateTime R_StartDate;
+        public DateTime R_EndDate;
 
         public RentBasic()
         {
 
         }
 
-        public RentBasic(RentIDBasic id, int price, string sdate, string edate)
+        public RentBasic(RentIDBasic id, int price, DateTime sdate, DateTime edate)
         {
             this.Rental_Price = price;
             this.Id = id;

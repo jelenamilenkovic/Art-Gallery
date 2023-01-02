@@ -66,7 +66,7 @@ namespace ArtGallery.Forms
             this.groupBoxCustomer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBoxCustomer.Location = new System.Drawing.Point(25, 12);
             this.groupBoxCustomer.Name = "groupBoxCustomer";
-            this.groupBoxCustomer.Size = new System.Drawing.Size(625, 299);
+            this.groupBoxCustomer.Size = new System.Drawing.Size(625, 116);
             this.groupBoxCustomer.TabIndex = 3;
             this.groupBoxCustomer.TabStop = false;
             this.groupBoxCustomer.Text = "Add customer";

@@ -10,8 +10,8 @@ namespace ArtGallery.Entities
     {
         public virtual RentID Id { get; set; }
         public virtual int Rental_Price { get; set; }
-        public virtual string R_StartDate { get; set; }
-        public virtual string R_EndDate { get; set; }
+        public virtual DateTime R_StartDate { get; set; }
+        public virtual DateTime R_EndDate { get; set; }
         public Rent()
         {
             Id = new RentID();

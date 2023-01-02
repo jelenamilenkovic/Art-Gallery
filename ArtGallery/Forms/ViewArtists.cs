@@ -62,5 +62,26 @@ namespace ArtGallery.Forms
 
             }
         }
+
+        private void btnViewArtworks_Click(object sender, EventArgs e)
+        {
+            this.dataGridViewArtworks.Rows.Clear();
+            if (dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected) == 0)
+            {
+                MessageBox.Show("Choose artist");
+                return;
+            }
+            else
+            {
+               //groupBox1.Visible = false;
+                groupBox2.Visible = true;
+                List<ArtworkPregled> podaci = DTOManager.getArtworksFromArtist(Int32.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()));
+                foreach (ArtworkPregled p in podaci)
+                {
+                    this.dataGridViewArtworks.Rows.Add(new string[] { p.Artwork_ID.ToString(), p.Title, p.Style, p.Year.ToString(), p.Type, p.Drawn_on, p.Material, p.Weight.ToString(), p.Height.ToString() });
+                }
+                dataGridViewArtworks.Refresh();
+            }
+        }
     }
 }

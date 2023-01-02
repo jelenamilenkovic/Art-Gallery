@@ -38,6 +38,7 @@ namespace ArtGallery
             this.btnAddArtist = new System.Windows.Forms.Button();
             this.btnArtwork = new System.Windows.Forms.Button();
             this.panelArtwork = new System.Windows.Forms.Panel();
+            this.btnRentArtwork = new System.Windows.Forms.Button();
             this.btnEditArtworks = new System.Windows.Forms.Button();
             this.btnViewArtworks = new System.Windows.Forms.Button();
             this.btnAddArtwork = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@ namespace ArtGallery
             this.oracleCommandBuilder1 = new Oracle.ManagedDataAccess.Client.OracleCommandBuilder();
             this.panelPlayer = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnRentArtwork = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelArtist.SuspendLayout();
             this.panelArtwork.SuspendLayout();
@@ -77,7 +77,7 @@ namespace ArtGallery
             this.panelSideMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(175, 570);
+            this.panelSideMenu.Size = new System.Drawing.Size(175, 600);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panel5
@@ -191,6 +191,23 @@ namespace ArtGallery
             this.panelArtwork.Name = "panelArtwork";
             this.panelArtwork.Size = new System.Drawing.Size(172, 92);
             this.panelArtwork.TabIndex = 3;
+            // 
+            // btnRentArtwork
+            // 
+            this.btnRentArtwork.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRentArtwork.FlatAppearance.BorderSize = 0;
+            this.btnRentArtwork.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnRentArtwork.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnRentArtwork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRentArtwork.ForeColor = System.Drawing.Color.Silver;
+            this.btnRentArtwork.Location = new System.Drawing.Point(0, 69);
+            this.btnRentArtwork.Name = "btnRentArtwork";
+            this.btnRentArtwork.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnRentArtwork.Size = new System.Drawing.Size(172, 23);
+            this.btnRentArtwork.TabIndex = 3;
+            this.btnRentArtwork.Text = "Rent Artwork";
+            this.btnRentArtwork.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRentArtwork.UseVisualStyleBackColor = true;
             // 
             // btnEditArtworks
             // 
@@ -393,7 +410,7 @@ namespace ArtGallery
             // panelPlayer
             // 
             this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPlayer.Location = new System.Drawing.Point(175, 534);
+            this.panelPlayer.Location = new System.Drawing.Point(175, 564);
             this.panelPlayer.Name = "panelPlayer";
             this.panelPlayer.Size = new System.Drawing.Size(785, 36);
             this.panelPlayer.TabIndex = 1;
@@ -403,31 +420,14 @@ namespace ArtGallery
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(175, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(785, 534);
+            this.panelChildForm.Size = new System.Drawing.Size(785, 564);
             this.panelChildForm.TabIndex = 2;
-            // 
-            // btnRentArtwork
-            // 
-            this.btnRentArtwork.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRentArtwork.FlatAppearance.BorderSize = 0;
-            this.btnRentArtwork.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnRentArtwork.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnRentArtwork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRentArtwork.ForeColor = System.Drawing.Color.Silver;
-            this.btnRentArtwork.Location = new System.Drawing.Point(0, 69);
-            this.btnRentArtwork.Name = "btnRentArtwork";
-            this.btnRentArtwork.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.btnRentArtwork.Size = new System.Drawing.Size(172, 23);
-            this.btnRentArtwork.TabIndex = 3;
-            this.btnRentArtwork.Text = "Rent Artwork";
-            this.btnRentArtwork.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRentArtwork.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(960, 570);
+            this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelPlayer);
             this.Controls.Add(this.panelSideMenu);

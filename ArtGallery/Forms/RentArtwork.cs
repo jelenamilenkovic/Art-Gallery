@@ -38,8 +38,8 @@ namespace ArtGallery.Forms
                 rent.Id = new RentIDBasic();
                 rent.Id.Artwork = artwork;
                 rent.Id.Customer = cust;
-                rent.R_StartDate= dateTimePickerStart.Value.ToString("dd.MM.yyyy");
-                rent.R_EndDate=dateTimePickerEnd.Value.ToString("dd.MM.yyyy");
+                rent.R_StartDate= dateTimePickerStart.Value.Date;
+                rent.R_EndDate=dateTimePickerEnd.Value.Date;
                 DTOManager.addRent(rent);
                 
             }

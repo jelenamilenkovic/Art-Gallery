@@ -29,16 +29,16 @@ namespace ArtGallery.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxArtworks = new System.Windows.Forms.GroupBox();
-            this.dataGridViewArtworks = new System.Windows.Forms.DataGridView();
-            this.btnSculpture = new System.Windows.Forms.Button();
-            this.btnPainting = new System.Windows.Forms.Button();
             this.btnAllOfArtworks = new System.Windows.Forms.Button();
+            this.btnPainting = new System.Windows.Forms.Button();
+            this.btnSculpture = new System.Windows.Forms.Button();
+            this.dataGridViewArtworks = new System.Windows.Forms.DataGridView();
             this.IDEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TitleArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StyleArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,73 +66,16 @@ namespace ArtGallery.Forms
             this.groupBoxArtworks.TabStop = false;
             this.groupBoxArtworks.Text = "View Artworks";
             // 
-            // dataGridViewArtworks
+            // btnAllOfArtworks
             // 
-            this.dataGridViewArtworks.AllowUserToAddRows = false;
-            this.dataGridViewArtworks.AllowUserToDeleteRows = false;
-            this.dataGridViewArtworks.AllowUserToResizeColumns = false;
-            this.dataGridViewArtworks.AllowUserToResizeRows = false;
-            this.dataGridViewArtworks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewArtworks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.dataGridViewArtworks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewArtworks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewArtworks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewArtworks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridViewArtworks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewArtworks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDEx,
-            this.TitleArtworks,
-            this.StyleArtworks,
-            this.YearArtworks,
-            this.ArtworksType,
-            this.DrawnArtworks,
-            this.MaterialArtworks,
-            this.WeightArtworks,
-            this.HeightArtworks});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewArtworks.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridViewArtworks.EnableHeadersVisualStyles = false;
-            this.dataGridViewArtworks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.dataGridViewArtworks.Location = new System.Drawing.Point(38, 78);
-            this.dataGridViewArtworks.Name = "dataGridViewArtworks";
-            this.dataGridViewArtworks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewArtworks.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridViewArtworks.RowHeadersVisible = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.dataGridViewArtworks.RowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridViewArtworks.Size = new System.Drawing.Size(551, 185);
-            this.dataGridViewArtworks.TabIndex = 3;
-            // 
-            // btnSculpture
-            // 
-            this.btnSculpture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSculpture.Location = new System.Drawing.Point(118, 19);
-            this.btnSculpture.Name = "btnSculpture";
-            this.btnSculpture.Size = new System.Drawing.Size(73, 25);
-            this.btnSculpture.TabIndex = 4;
-            this.btnSculpture.Text = "Sculpture";
-            this.btnSculpture.UseVisualStyleBackColor = true;
-            this.btnSculpture.Click += new System.EventHandler(this.btnSculpture_Click);
+            this.btnAllOfArtworks.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAllOfArtworks.Location = new System.Drawing.Point(410, 19);
+            this.btnAllOfArtworks.Name = "btnAllOfArtworks";
+            this.btnAllOfArtworks.Size = new System.Drawing.Size(73, 25);
+            this.btnAllOfArtworks.TabIndex = 6;
+            this.btnAllOfArtworks.Text = "Artworks";
+            this.btnAllOfArtworks.UseVisualStyleBackColor = true;
+            this.btnAllOfArtworks.Click += new System.EventHandler(this.btnAllOfArtworks_Click);
             // 
             // btnPainting
             // 
@@ -145,16 +88,74 @@ namespace ArtGallery.Forms
             this.btnPainting.UseVisualStyleBackColor = true;
             this.btnPainting.Click += new System.EventHandler(this.btnPainting_Click);
             // 
-            // btnAllOfArtworks
+            // btnSculpture
             // 
-            this.btnAllOfArtworks.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAllOfArtworks.Location = new System.Drawing.Point(410, 19);
-            this.btnAllOfArtworks.Name = "btnAllOfArtworks";
-            this.btnAllOfArtworks.Size = new System.Drawing.Size(73, 25);
-            this.btnAllOfArtworks.TabIndex = 6;
-            this.btnAllOfArtworks.Text = "Artworks";
-            this.btnAllOfArtworks.UseVisualStyleBackColor = true;
-            this.btnAllOfArtworks.Click += new System.EventHandler(this.btnAllOfArtworks_Click);
+            this.btnSculpture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSculpture.Location = new System.Drawing.Point(118, 19);
+            this.btnSculpture.Name = "btnSculpture";
+            this.btnSculpture.Size = new System.Drawing.Size(73, 25);
+            this.btnSculpture.TabIndex = 4;
+            this.btnSculpture.Text = "Sculpture";
+            this.btnSculpture.UseVisualStyleBackColor = true;
+            this.btnSculpture.Click += new System.EventHandler(this.btnSculpture_Click);
+            // 
+            // dataGridViewArtworks
+            // 
+            this.dataGridViewArtworks.AllowUserToAddRows = false;
+            this.dataGridViewArtworks.AllowUserToDeleteRows = false;
+            this.dataGridViewArtworks.AllowUserToResizeColumns = false;
+            this.dataGridViewArtworks.AllowUserToResizeRows = false;
+            this.dataGridViewArtworks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewArtworks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            this.dataGridViewArtworks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewArtworks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewArtworks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewArtworks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewArtworks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewArtworks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDEx,
+            this.TitleArtworks,
+            this.StyleArtworks,
+            this.YearArtworks,
+            this.ArtworksType,
+            this.DrawnArtworks,
+            this.MaterialArtworks,
+            this.WeightArtworks,
+            this.HeightArtworks});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewArtworks.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewArtworks.EnableHeadersVisualStyles = false;
+            this.dataGridViewArtworks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            this.dataGridViewArtworks.Location = new System.Drawing.Point(38, 78);
+            this.dataGridViewArtworks.Name = "dataGridViewArtworks";
+            this.dataGridViewArtworks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewArtworks.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewArtworks.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            this.dataGridViewArtworks.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewArtworks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewArtworks.Size = new System.Drawing.Size(551, 185);
+            this.dataGridViewArtworks.TabIndex = 3;
             // 
             // IDEx
             // 
@@ -163,9 +164,9 @@ namespace ArtGallery.Forms
             // 
             // TitleArtworks
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            this.TitleArtworks.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.TitleArtworks.DefaultCellStyle = dataGridViewCellStyle2;
             this.TitleArtworks.HeaderText = "Title";
             this.TitleArtworks.Name = "TitleArtworks";
             // 
@@ -209,7 +210,7 @@ namespace ArtGallery.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(674, 361);
+            this.ClientSize = new System.Drawing.Size(674, 461);
             this.Controls.Add(this.groupBoxArtworks);
             this.Name = "ViewArtworks";
             this.Text = "ViewArtworks";
