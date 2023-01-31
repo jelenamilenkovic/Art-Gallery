@@ -150,9 +150,7 @@ namespace ArtGallery
 
         private void button9_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new RentArtwork());
-
-            hideSubMenu();
+            
         }
 
         private void btnAddArtist_Click(object sender, EventArgs e)
@@ -214,6 +212,13 @@ namespace ArtGallery
         private void btnAddArtwork_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new AddArtwork());
+
+            hideSubMenu();
+        }
+
+        private void btnRentArtwork_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new RentArtwork());
 
             hideSubMenu();
         }

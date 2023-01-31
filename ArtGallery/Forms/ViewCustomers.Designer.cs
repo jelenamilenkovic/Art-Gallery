@@ -68,11 +68,6 @@ namespace ArtGallery.Forms
             this.TitleArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StyleArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.YearArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArtworksType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DrawnArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaterialArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WeightArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeightArtworks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBoxCustomer.SuspendLayout();
@@ -379,12 +374,7 @@ namespace ArtGallery.Forms
             this.IDEx,
             this.TitleArtworks,
             this.StyleArtworks,
-            this.YearArtworks,
-            this.ArtworksType,
-            this.DrawnArtworks,
-            this.MaterialArtworks,
-            this.WeightArtworks,
-            this.HeightArtworks});
+            this.YearArtworks});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -427,38 +417,13 @@ namespace ArtGallery.Forms
             // 
             // StyleArtworks
             // 
-            this.StyleArtworks.HeaderText = "Style";
+            this.StyleArtworks.HeaderText = "Start Date";
             this.StyleArtworks.Name = "StyleArtworks";
             // 
             // YearArtworks
             // 
-            this.YearArtworks.HeaderText = "Year";
+            this.YearArtworks.HeaderText = "End Date";
             this.YearArtworks.Name = "YearArtworks";
-            // 
-            // ArtworksType
-            // 
-            this.ArtworksType.HeaderText = "Type";
-            this.ArtworksType.Name = "ArtworksType";
-            // 
-            // DrawnArtworks
-            // 
-            this.DrawnArtworks.HeaderText = "Drawn On";
-            this.DrawnArtworks.Name = "DrawnArtworks";
-            // 
-            // MaterialArtworks
-            // 
-            this.MaterialArtworks.HeaderText = "Material";
-            this.MaterialArtworks.Name = "MaterialArtworks";
-            // 
-            // WeightArtworks
-            // 
-            this.WeightArtworks.HeaderText = "Weight";
-            this.WeightArtworks.Name = "WeightArtworks";
-            // 
-            // HeightArtworks
-            // 
-            this.HeightArtworks.HeaderText = "Height";
-            this.HeightArtworks.Name = "HeightArtworks";
             // 
             // ViewCustomers
             // 
@@ -513,10 +478,5 @@ namespace ArtGallery.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn TitleArtworks;
         private System.Windows.Forms.DataGridViewTextBoxColumn StyleArtworks;
         private System.Windows.Forms.DataGridViewTextBoxColumn YearArtworks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ArtworksType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DrawnArtworks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialArtworks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WeightArtworks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HeightArtworks;
     }
 }

@@ -34,6 +34,10 @@ namespace ArtGallery.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxArtwork = new System.Windows.Forms.GroupBox();
+            this.numericUpH = new System.Windows.Forms.NumericUpDown();
+            this.numericUpW = new System.Windows.Forms.NumericUpDown();
+            this.numericUpPrice = new System.Windows.Forms.NumericUpDown();
+            this.numericUpYear = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewArtists = new System.Windows.Forms.DataGridView();
             this.ArtistID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArtistName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,17 +76,13 @@ namespace ArtGallery.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpYear = new System.Windows.Forms.NumericUpDown();
-            this.numericUpPrice = new System.Windows.Forms.NumericUpDown();
-            this.numericUpW = new System.Windows.Forms.NumericUpDown();
-            this.numericUpH = new System.Windows.Forms.NumericUpDown();
             this.groupBoxArtwork.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtists)).BeginInit();
             this.groupBoxAddNewArtist.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpYear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpH)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxArtwork
@@ -91,7 +91,6 @@ namespace ArtGallery.Forms
             this.groupBoxArtwork.Controls.Add(this.numericUpW);
             this.groupBoxArtwork.Controls.Add(this.numericUpPrice);
             this.groupBoxArtwork.Controls.Add(this.numericUpYear);
-            this.groupBoxArtwork.Controls.Add(this.dataGridViewArtists);
             this.groupBoxArtwork.Controls.Add(this.btnDB);
             this.groupBoxArtwork.Controls.Add(this.btnAddNew);
             this.groupBoxArtwork.Controls.Add(this.btnNN);
@@ -112,10 +111,60 @@ namespace ArtGallery.Forms
             this.groupBoxArtwork.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBoxArtwork.Location = new System.Drawing.Point(52, 36);
             this.groupBoxArtwork.Name = "groupBoxArtwork";
-            this.groupBoxArtwork.Size = new System.Drawing.Size(580, 346);
+            this.groupBoxArtwork.Size = new System.Drawing.Size(580, 405);
             this.groupBoxArtwork.TabIndex = 2;
             this.groupBoxArtwork.TabStop = false;
             this.groupBoxArtwork.Text = "Add artwork";
+            // 
+            // numericUpH
+            // 
+            this.numericUpH.DecimalPlaces = 2;
+            this.numericUpH.Location = new System.Drawing.Point(67, 117);
+            this.numericUpH.Maximum = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            this.numericUpH.Name = "numericUpH";
+            this.numericUpH.Size = new System.Drawing.Size(116, 20);
+            this.numericUpH.TabIndex = 39;
+            // 
+            // numericUpW
+            // 
+            this.numericUpW.DecimalPlaces = 2;
+            this.numericUpW.Location = new System.Drawing.Point(67, 72);
+            this.numericUpW.Maximum = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            this.numericUpW.Name = "numericUpW";
+            this.numericUpW.Size = new System.Drawing.Size(116, 20);
+            this.numericUpW.TabIndex = 38;
+            // 
+            // numericUpPrice
+            // 
+            this.numericUpPrice.Location = new System.Drawing.Point(445, 70);
+            this.numericUpPrice.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpPrice.Name = "numericUpPrice";
+            this.numericUpPrice.Size = new System.Drawing.Size(116, 20);
+            this.numericUpPrice.TabIndex = 37;
+            // 
+            // numericUpYear
+            // 
+            this.numericUpYear.Location = new System.Drawing.Point(445, 22);
+            this.numericUpYear.Maximum = new decimal(new int[] {
+            2022,
+            0,
+            0,
+            0});
+            this.numericUpYear.Name = "numericUpYear";
+            this.numericUpYear.Size = new System.Drawing.Size(116, 20);
+            this.numericUpYear.TabIndex = 36;
             // 
             // dataGridViewArtists
             // 
@@ -158,13 +207,13 @@ namespace ArtGallery.Forms
             this.dataGridViewArtists.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewArtists.EnableHeadersVisualStyles = false;
             this.dataGridViewArtists.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.dataGridViewArtists.Location = new System.Drawing.Point(17, 26);
+            this.dataGridViewArtists.Location = new System.Drawing.Point(-30, 0);
             this.dataGridViewArtists.Name = "dataGridViewArtists";
             this.dataGridViewArtists.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
             this.dataGridViewArtists.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewArtists.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewArtists.Size = new System.Drawing.Size(557, 128);
+            this.dataGridViewArtists.Size = new System.Drawing.Size(568, 150);
             this.dataGridViewArtists.TabIndex = 35;
             this.dataGridViewArtists.Visible = false;
             // 
@@ -246,6 +295,7 @@ namespace ArtGallery.Forms
             this.groupBoxAddNewArtist.Controls.Add(this.txtCountry);
             this.groupBoxAddNewArtist.Controls.Add(this.txtCity);
             this.groupBoxAddNewArtist.Controls.Add(this.Country);
+            this.groupBoxAddNewArtist.Controls.Add(this.dataGridViewArtists);
             this.groupBoxAddNewArtist.Controls.Add(this.City);
             this.groupBoxAddNewArtist.Controls.Add(this.txtArtistLName);
             this.groupBoxAddNewArtist.Controls.Add(this.txtArtistName);
@@ -415,7 +465,7 @@ namespace ArtGallery.Forms
             this.btnAddArtwork.Enabled = false;
             this.btnAddArtwork.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArtwork.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAddArtwork.Location = new System.Drawing.Point(461, 310);
+            this.btnAddArtwork.Location = new System.Drawing.Point(448, 357);
             this.btnAddArtwork.Name = "btnAddArtwork";
             this.btnAddArtwork.Size = new System.Drawing.Size(113, 30);
             this.btnAddArtwork.TabIndex = 6;
@@ -507,62 +557,12 @@ namespace ArtGallery.Forms
             this.label6.TabIndex = 7;
             this.label6.Text = "?";
             // 
-            // numericUpYear
-            // 
-            this.numericUpYear.Location = new System.Drawing.Point(445, 22);
-            this.numericUpYear.Maximum = new decimal(new int[] {
-            2022,
-            0,
-            0,
-            0});
-            this.numericUpYear.Name = "numericUpYear";
-            this.numericUpYear.Size = new System.Drawing.Size(116, 20);
-            this.numericUpYear.TabIndex = 36;
-            // 
-            // numericUpPrice
-            // 
-            this.numericUpPrice.Location = new System.Drawing.Point(445, 70);
-            this.numericUpPrice.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numericUpPrice.Name = "numericUpPrice";
-            this.numericUpPrice.Size = new System.Drawing.Size(116, 20);
-            this.numericUpPrice.TabIndex = 37;
-            // 
-            // numericUpW
-            // 
-            this.numericUpW.DecimalPlaces = 2;
-            this.numericUpW.Location = new System.Drawing.Point(67, 72);
-            this.numericUpW.Maximum = new decimal(new int[] {
-            2022,
-            0,
-            0,
-            0});
-            this.numericUpW.Name = "numericUpW";
-            this.numericUpW.Size = new System.Drawing.Size(116, 20);
-            this.numericUpW.TabIndex = 38;
-            // 
-            // numericUpH
-            // 
-            this.numericUpH.DecimalPlaces = 2;
-            this.numericUpH.Location = new System.Drawing.Point(67, 117);
-            this.numericUpH.Maximum = new decimal(new int[] {
-            2022,
-            0,
-            0,
-            0});
-            this.numericUpH.Name = "numericUpH";
-            this.numericUpH.Size = new System.Drawing.Size(116, 20);
-            this.numericUpH.TabIndex = 39;
-            // 
             // AddArtwork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(674, 411);
+            this.ClientSize = new System.Drawing.Size(674, 561);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -573,13 +573,13 @@ namespace ArtGallery.Forms
             this.Text = "AddArtwork";
             this.groupBoxArtwork.ResumeLayout(false);
             this.groupBoxArtwork.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArtists)).EndInit();
             this.groupBoxAddNewArtist.ResumeLayout(false);
             this.groupBoxAddNewArtist.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpYear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

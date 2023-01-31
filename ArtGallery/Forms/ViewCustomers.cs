@@ -100,10 +100,10 @@ namespace ArtGallery.Forms
             {
                 groupBoxCustomer.Visible = false;
                 groupBox2.Visible = true;
-                List<ArtworkPregled> podaci = DTOManager.getArtworksFromCustomer(Int32.Parse(dataGridViewCustomers.SelectedRows[0].Cells[0].Value.ToString()));
-                foreach(ArtworkPregled p in podaci)
+                List<RentBasic> podaci = DTOManager.getRentWithCID(Int32.Parse(dataGridViewCustomers.SelectedRows[0].Cells[0].Value.ToString()));
+                foreach(RentBasic p in podaci)
                 {
-                    this.dataGridViewArtworks.Rows.Add(new string[] { p.Artwork_ID.ToString(), p.Title, p.Style, p.Year.ToString(), p.Type, p.Drawn_on, p.Material, p.Weight.ToString(), p.Height.ToString() });
+                    this.dataGridViewArtworks.Rows.Add(new string[] { p.Id.Artwork.Artwork_ID.ToString(), p.Id.Artwork.Title, p.R_StartDate.ToString(), p.R_EndDate.ToString() });
                 }
                 dataGridViewArtworks.Refresh();
             }

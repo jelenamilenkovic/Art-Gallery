@@ -34,6 +34,9 @@ namespace ArtGallery.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.comBoxFilter = new System.Windows.Forms.ComboBox();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ArtistID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArtistName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +44,8 @@ namespace ArtGallery.Forms
             this.ArtistCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArtistCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArtistBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxFind = new System.Windows.Forms.TextBox();
-            this.comBoxFilter = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.Country = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace ArtGallery.Forms
             this.txtArtistName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -74,6 +74,37 @@ namespace ArtGallery.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "View Artists";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSearch.Location = new System.Drawing.Point(465, 34);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(95, 25);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // comBoxFilter
+            // 
+            this.comBoxFilter.FormattingEnabled = true;
+            this.comBoxFilter.Items.AddRange(new object[] {
+            "Name",
+            "Last Name"});
+            this.comBoxFilter.Location = new System.Drawing.Point(321, 34);
+            this.comBoxFilter.Name = "comBoxFilter";
+            this.comBoxFilter.Size = new System.Drawing.Size(105, 25);
+            this.comBoxFilter.TabIndex = 4;
+            this.comBoxFilter.Text = "Filter";
+            // 
+            // textBoxFind
+            // 
+            this.textBoxFind.Location = new System.Drawing.Point(47, 34);
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(239, 25);
+            this.textBoxFind.TabIndex = 3;
+            this.textBoxFind.Text = "Find...";
             // 
             // dataGridView1
             // 
@@ -157,37 +188,6 @@ namespace ArtGallery.Forms
             this.ArtistBD.HeaderText = "BirthDate";
             this.ArtistBD.Name = "ArtistBD";
             // 
-            // textBoxFind
-            // 
-            this.textBoxFind.Location = new System.Drawing.Point(47, 34);
-            this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(239, 25);
-            this.textBoxFind.TabIndex = 3;
-            this.textBoxFind.Text = "Find...";
-            // 
-            // comBoxFilter
-            // 
-            this.comBoxFilter.FormattingEnabled = true;
-            this.comBoxFilter.Items.AddRange(new object[] {
-            "Name",
-            "Last Name"});
-            this.comBoxFilter.Location = new System.Drawing.Point(321, 34);
-            this.comBoxFilter.Name = "comBoxFilter";
-            this.comBoxFilter.Size = new System.Drawing.Size(105, 25);
-            this.comBoxFilter.TabIndex = 4;
-            this.comBoxFilter.Text = "Filter";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(465, 34);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 25);
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnUpdate);
@@ -206,8 +206,19 @@ namespace ArtGallery.Forms
             this.groupBox2.Size = new System.Drawing.Size(622, 136);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add artist";
+            this.groupBox2.Text = "Edit artist";
             this.groupBox2.Visible = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUpdate.Location = new System.Drawing.Point(465, 98);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(94, 23);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtCountry
             // 
@@ -272,17 +283,6 @@ namespace ArtGallery.Forms
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdate.Location = new System.Drawing.Point(465, 98);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 23);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // EditArtist
             // 

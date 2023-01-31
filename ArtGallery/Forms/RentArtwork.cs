@@ -48,10 +48,10 @@ namespace ArtGallery.Forms
             
         }
         private void btnSearch_Click(object sender, EventArgs e)
-        {
-            WriteArtworks();
+        {if(dateTimePickerStart.Checked==true && dateTimePickerEnd.Checked == true) {
+            WriteArtworks(dateTimePickerStart.Value.Date,dateTimePickerEnd.Value.Date);
             WriteCustomers();
-
+ }
         }
         public void WriteCustomers()
         {
@@ -69,14 +69,13 @@ namespace ArtGallery.Forms
             dataGridViewCustomers.Refresh();
         }
 
-        public void WriteArtworks()
+        public void WriteArtworks(DateTime s1,DateTime e1)
         {
             this.dataGridViewArtworks.Rows.Clear();
-            List<ArtworkPregled> podaci = DTOManager.getArtworks();
-
-
-
-            foreach (ArtworkPregled p in podaci)
+            List<ArtworkPregled> podaci1 = DTOManager.getArtworksOverlap(s1, e1);
+            List<ArtworkPregled> podaci2 = DTOManager.getArtworksOverlap2(s1, e1);
+            List<ArtworkPregled> fin = podaci1.Intersect(podaci2).ToList();
+            foreach (ArtworkPregled p in fin)
             {
                 this.dataGridViewArtworks.Rows.Add(new string[] { p.Artwork_ID.ToString(), p.Title, p.Style, p.Year.ToString(), p.Type, p.Drawn_on, p.Material, p.Weight.ToString(), p.Height.ToString() });
 

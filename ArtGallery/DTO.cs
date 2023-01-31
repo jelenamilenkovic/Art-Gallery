@@ -146,15 +146,15 @@ namespace ArtGallery
 
     public class ExhibitionBasic {
         public int Exhibition_ID;
-        public string Start_Date;
-        public string End_Date;
+        public DateTime Start_Date;
+        public DateTime End_Date;
         public int Hall; 
 
         public virtual IList<ArtworkBasic> Artworks { get; set; }
         public ExhibitionBasic() {
             Artworks = new List<ArtworkBasic>();
         }
-        public ExhibitionBasic(int eId,string sDate,string eDate,int h)
+        public ExhibitionBasic(int eId, DateTime sDate, DateTime eDate,int h)
         {
             this.Exhibition_ID = eId;
             this.Start_Date = sDate;
@@ -165,12 +165,12 @@ namespace ArtGallery
     public class ExhibitionPregled
     {
         public int Exhibition_ID;
-        public string Start_Date;
-        public string End_Date;
+        public DateTime Start_Date;
+        public DateTime End_Date;
         public int Hall;
 
         public ExhibitionPregled() { }
-        public ExhibitionPregled(int eId, string sDate, string eDate, int h)
+        public ExhibitionPregled(int eId, DateTime sDate, DateTime eDate, int h)
         {
             this.Exhibition_ID = eId;
             this.Start_Date = sDate;
@@ -265,6 +265,11 @@ namespace ArtGallery
         public RentIDBasic()
         {
 
+        }
+        public RentIDBasic(CustomerBasic c,ArtworkBasic a)
+        {
+            Customer = c;
+            Artwork = a;
         }
     }
     #endregion

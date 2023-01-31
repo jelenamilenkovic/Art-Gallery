@@ -39,7 +39,6 @@ namespace ArtGallery
             this.btnArtwork = new System.Windows.Forms.Button();
             this.panelArtwork = new System.Windows.Forms.Panel();
             this.btnRentArtwork = new System.Windows.Forms.Button();
-            this.btnEditArtworks = new System.Windows.Forms.Button();
             this.btnViewArtworks = new System.Windows.Forms.Button();
             this.btnAddArtwork = new System.Windows.Forms.Button();
             this.btnExhibition = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@ namespace ArtGallery
             this.btnAddExhibition = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.panelCustomer = new System.Windows.Forms.Panel();
-            this.btnEditCustomer = new System.Windows.Forms.Button();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnViewCustomers = new System.Windows.Forms.Button();
             this.oracleCommandBuilder1 = new Oracle.ManagedDataAccess.Client.OracleCommandBuilder();
@@ -184,7 +182,6 @@ namespace ArtGallery
             // 
             this.panelArtwork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelArtwork.Controls.Add(this.btnRentArtwork);
-            this.panelArtwork.Controls.Add(this.btnEditArtworks);
             this.panelArtwork.Controls.Add(this.btnViewArtworks);
             this.panelArtwork.Controls.Add(this.btnAddArtwork);
             this.panelArtwork.Location = new System.Drawing.Point(3, 215);
@@ -200,7 +197,7 @@ namespace ArtGallery
             this.btnRentArtwork.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnRentArtwork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRentArtwork.ForeColor = System.Drawing.Color.Silver;
-            this.btnRentArtwork.Location = new System.Drawing.Point(0, 69);
+            this.btnRentArtwork.Location = new System.Drawing.Point(0, 46);
             this.btnRentArtwork.Name = "btnRentArtwork";
             this.btnRentArtwork.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.btnRentArtwork.Size = new System.Drawing.Size(172, 23);
@@ -208,24 +205,7 @@ namespace ArtGallery
             this.btnRentArtwork.Text = "Rent Artwork";
             this.btnRentArtwork.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRentArtwork.UseVisualStyleBackColor = true;
-            // 
-            // btnEditArtworks
-            // 
-            this.btnEditArtworks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditArtworks.FlatAppearance.BorderSize = 0;
-            this.btnEditArtworks.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnEditArtworks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnEditArtworks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditArtworks.ForeColor = System.Drawing.Color.Silver;
-            this.btnEditArtworks.Location = new System.Drawing.Point(0, 46);
-            this.btnEditArtworks.Name = "btnEditArtworks";
-            this.btnEditArtworks.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.btnEditArtworks.Size = new System.Drawing.Size(172, 23);
-            this.btnEditArtworks.TabIndex = 0;
-            this.btnEditArtworks.Text = "Edit Artworks";
-            this.btnEditArtworks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditArtworks.UseVisualStyleBackColor = true;
-            this.btnEditArtworks.Click += new System.EventHandler(this.btnEditArtworks_Click);
+            this.btnRentArtwork.Click += new System.EventHandler(this.btnRentArtwork_Click);
             // 
             // btnViewArtworks
             // 
@@ -340,31 +320,12 @@ namespace ArtGallery
             // panelCustomer
             // 
             this.panelCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelCustomer.Controls.Add(this.btnEditCustomer);
             this.panelCustomer.Controls.Add(this.btnAddCustomer);
             this.panelCustomer.Controls.Add(this.btnViewCustomers);
             this.panelCustomer.Location = new System.Drawing.Point(3, 446);
             this.panelCustomer.Name = "panelCustomer";
             this.panelCustomer.Size = new System.Drawing.Size(175, 70);
             this.panelCustomer.TabIndex = 2;
-            // 
-            // btnEditCustomer
-            // 
-            this.btnEditCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditCustomer.FlatAppearance.BorderSize = 0;
-            this.btnEditCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnEditCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnEditCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCustomer.ForeColor = System.Drawing.Color.Silver;
-            this.btnEditCustomer.Location = new System.Drawing.Point(0, 46);
-            this.btnEditCustomer.Name = "btnEditCustomer";
-            this.btnEditCustomer.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.btnEditCustomer.Size = new System.Drawing.Size(175, 23);
-            this.btnEditCustomer.TabIndex = 3;
-            this.btnEditCustomer.Text = "Edit Customer";
-            this.btnEditCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditCustomer.UseVisualStyleBackColor = true;
-            this.btnEditCustomer.Click += new System.EventHandler(this.button9_Click);
             // 
             // btnAddCustomer
             // 
@@ -467,11 +428,9 @@ namespace ArtGallery
         private System.Windows.Forms.Button btnAddArtwork;
         private System.Windows.Forms.Button btnViewExhibition;
         private System.Windows.Forms.Button btnAddExhibition;
-        private System.Windows.Forms.Button btnEditCustomer;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Panel panelPlayer;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button btnEditArtworks;
         private System.Windows.Forms.Button btnViewCustomers;
         private System.Windows.Forms.Button btnRentArtwork;
     }

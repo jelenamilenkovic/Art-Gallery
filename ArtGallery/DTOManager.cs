@@ -568,6 +568,37 @@ namespace ArtGallery
 
             return artworks;
         }
+        public static List<ArtworkPregled> getArtworksOverlap2(DateTime s1, DateTime e1)
+        {
+            List<ArtworkPregled> artworks = new List<ArtworkPregled>();
+            try
+            {
+
+                ISession s = DataLayer.GetSession();
+                ISQLQuery q = s.CreateSQLQuery("select o.* from artwork o where o.artwork_id not in"
+                    +"(select s.artwork_id from shown s inner join exhibition e on e.exhibition_id = s.exhibition_id where (e.Start_Date <= :e1 and  e.END_DATE >= :s1))"); ;
+
+                /*IQuery q = s.CreateQuery("select o from Artwork o inner join Rent k  "+" on o.Artwork_ID = k.Artwork_ID"
+                        + " and not(DATE(k.R_StartDate) <= :e1 and k.R_EndDate >= :s1 )" );*/
+                q.SetParameter("e1", e1.Date);
+                q.SetParameter("s1", s1.Date);
+                q.AddEntity(typeof(Artwork));
+                IList<Artwork> allOfArtwork = q.List<Artwork>();
+
+                foreach (Artwork p in allOfArtwork)
+                {
+                    artworks.Add(new ArtworkPregled(p.Artwork_ID, p.Title, p.Style, p.Year, p.Type, p.Drawn_on, p.Material, p.Weight, p.Height));
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return artworks;
+        }
         public static List<ArtworkPregled> getArtworksOverlap(DateTime s1,DateTime e1)
         {
             List<ArtworkPregled> artworks = new List<ArtworkPregled>();
@@ -598,9 +629,9 @@ namespace ArtGallery
 
             return artworks;
         }
-        public static List<ArtworkPregled> getArtworksFromCustomer(int CID)
+        public static List<ArtworkBasic> getArtworksFromCustomer(int CID)
         {
-            List<ArtworkPregled> artworks = new List<ArtworkPregled>();
+            List<ArtworkBasic> artworks = new List<ArtworkBasic>();
             try
             {
                 ISession s = DataLayer.GetSession();
@@ -611,7 +642,7 @@ namespace ArtGallery
 
                 foreach (ArtGallery.Entities.Artwork p in allOfArtwork)
                 {
-                    artworks.Add(new ArtworkPregled(p.Artwork_ID, p.Title, p.Style, p.Year, p.Type, p.Drawn_on, p.Material, p.Weight, p.Height));
+                    artworks.Add(new ArtworkBasic(p.Artwork_ID, p.Title, p.Style, p.Year, p.Type, p.Drawn_on, p.Material, p.Weight, p.Height));
                 }
 
                 s.Close();
@@ -799,6 +830,33 @@ namespace ArtGallery
                 //handle exceptions
             }
 
+        }
+
+        public static List<RentBasic> getRentWithCID(int CID)
+        {
+            List<RentBasic> rent = new List<RentBasic>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                IEnumerable<Rent> allOfRent = from o in s.Query<Rent>()
+                                         where o.Id.Customer.Customer_ID==CID
+                                         select o;
+
+                foreach (Rent p in allOfRent)
+                {
+                    ArtworkBasic art = DTOManager.getArtwork(p.Id.Artwork.Artwork_ID);
+                    CustomerBasic cu = DTOManager.getCustomer(CID);
+                    rent.Add(new RentBasic(new RentIDBasic(cu, art), p.Rental_Price, p.R_StartDate, p.R_EndDate));
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return rent;
         }
         #endregion
 

@@ -29,7 +29,7 @@ namespace ArtGallery.Forms
             groupBoxArtworks.Visible = true;
             this.dataGridViewArtworks.Rows.Clear();
 
-            List<ArtworkPregled> podaci = DTOManager.getArtworksOverlap(monthCalendarStartDate.SelectionEnd.Date, monthCalendarEndDate.SelectionEnd.Date);
+            List<ArtworkPregled> podaci = DTOManager.getArtworksOverlap2(monthCalendarStartDate.SelectionEnd.Date, monthCalendarEndDate.SelectionEnd.Date);
 
 
 
@@ -54,8 +54,8 @@ namespace ArtGallery.Forms
             else
             {
                 this.exhibition.Hall = Int32.Parse(comboBoxHall.Text);
-                this.exhibition.Start_Date = monthCalendarStartDate.SelectionEnd.ToString("dd.MM.yyyy");
-                this.exhibition.End_Date = monthCalendarEndDate.SelectionEnd.ToString("dd.MM.yyyy");
+                this.exhibition.Start_Date = monthCalendarStartDate.SelectionEnd.Date;
+                this.exhibition.End_Date = monthCalendarEndDate.SelectionEnd.Date;
                 EID=DTOManager.addExhibition(this.exhibition);
                 MessageBox.Show("Successfully");
                 shown.Artwork = DTOManager.getArtwork(Int32.Parse(dataGridViewArtworks.SelectedRows[0].Cells[0].Value.ToString()));
